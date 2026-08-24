@@ -1,0 +1,84 @@
+{
+  "DocsOverview": {
+    "eyebrow": "模板文档",
+    "title": "源代码概览",
+    "description": "本 Next.js 16 模板的快速地图：技术栈、主要目录，以及扩展时的约定。",
+    "navOverview": "概览",
+    "navHow": "工作原理",
+    "stackTitle": "技术栈",
+    "foldersTitle": "目录结构",
+    "foldersIntro": "每个目录职责清晰。将逻辑放在正确的层级以便维护。",
+    "folders": {
+      "app": "App Router — 按 [locale] 组织的 layout、page、error、not-found",
+      "components": "shadcn UI + providers + 站点区块",
+      "configs": "ENV、endpoints、routes（常量）",
+      "fetches": "面向 CMS / Rank Math / CF7 的 HTTP helpers",
+      "services": "基于 fetches 的领域 API 封装",
+      "i18n": "routing、request 配置、带 locale 的 Link/router",
+      "hooks": "共享 React hooks",
+      "lib": "小工具（cn 等）",
+      "utils": "Helpers（滚动、metadata、Rank Math 解析）",
+      "styles": "globals.css + Tailwind 4 主题 tokens",
+      "messages": "翻译目录 vi.json / en.json / cn.json",
+      "proxy": "next-intl middleware（Next 16 使用 proxy.ts）"
+    },
+    "conventionsTitle": "主要约定",
+    "c1Label": "Locale：",
+    "c1": "默认 vi，prefix as-needed — / 为越南语，/en 为英语，/cn 为中文。",
+    "c2Label": "导航：",
+    "c2": "始终使用 @/i18n/navigation 的 Link/useRouter，不要直接使用 next/link。",
+    "c3Label": "别名：",
+    "c3": "@/* 映射到 src/*。",
+    "c4Label": "包管理：",
+    "c4": "pnpm。"
+  },
+  "DocsHow": {
+    "eyebrow": "模板文档",
+    "title": "源码如何工作",
+    "description": "本模板中的请求流程、i18n、数据层，以及如何添加新页面。",
+    "navOverview": "概览",
+    "navHow": "工作原理",
+    "requestTitle": "请求流程",
+    "requestIntro": "每个 URL 在页面渲染前都会经过这些层。",
+    "flow": {
+      "proxy": "解析 locale，重写 pathname（/gioi-thieu ↔ /about）。",
+      "rootLayout": "字体、globals.css、QueryProvider、NuqsAdapter。",
+      "localeLayout": "校验 locale、setRequestLocale、NextIntlClientProvider + messages。",
+      "page": "渲染匹配的页面（或 [...rest] → notFound）。"
+    },
+    "i18nTitle": "i18n 与路由",
+    "i18n1": "配置位于 src/i18n/routing.ts — locales vi/en/cn，defaultLocale vi。",
+    "i18n2": "页面文件使用内部路径：app/[locale]/gioi-thieu/。英语公开 URL 为 /en/about，中文为 /cn/about（通过 pathnames）。",
+    "i18n3": "messages/vi.json、en.json、cn.json 在 src/i18n/request.ts 中加载。",
+    "i18n4": "404：[locale]/not-found.tsx + catch-all [...rest]。运行时错误：error.tsx / global-error.tsx。",
+    "dataTitle": "数据层",
+    "dataIntro": "拆分为 config → fetch → service → UI。",
+    "data": {
+      "configs": "ENV（DOMAIN/CMS/API）、ENDPOINTS、ROUTES。",
+      "fetches": "fetchData() 请求 ENV.CMS + ENV.API + endpoint；Rank Math / CF7 helpers 单独处理。",
+      "services": "例如 tourService 封装 endpoint 并向页面返回数据。",
+      "consume": "Server Components await service，或 Client 使用 TanStack Query。"
+    },
+    "dataExampleBefore": "示例：",
+    "dataExampleAfter": "→ fetchData → WordPress REST。",
+    "providersTitle": "Providers",
+    "providers1": "QueryProvider（根）：客户端缓存，staleTime 60s，DevTools。",
+    "providers2": "NuqsAdapter（根）：类型安全的 URL search params。",
+    "providers3": "Drawer/Sheet providers：受控封装 — 需要时再挂载，不要全局挂载。",
+    "addPageTitle": "添加新页面",
+    "add1": "创建 src/app/[locale]/your-page/page.tsx，使用 setRequestLocale + useTranslations。",
+    "add2": "在 routing.ts 中添加 pathname（如需要也加入 ROUTES）。",
+    "add3": "在 messages/vi.json、en.json、cn.json 中添加文案。",
+    "add4": "使用 @/i18n/navigation，以内部 pathname key 进行链接。"
+  },
+  "NotFoundPage": {
+    "title": "页面未找到",
+    "description": "您访问的页面不存在或已被移动。",
+    "backHome": "返回首页"
+  },
+  "ErrorPage": {
+    "title": "出错了",
+    "description": "发生了意外错误，请重试。",
+    "retry": "重试"
+  }
+}
