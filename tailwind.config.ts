@@ -28,6 +28,7 @@ const config: Config = {
         heading: ['var(--font-playfair-family)', 'Georgia', 'serif'],
         arial: ['Arial', 'Helvetica', 'sans-serif'],
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+        'libertinus-serif': ['var(--font-libertinus-serif-family)', 'Arial', 'serif'],
       },
       colors: {},
       backgroundImage: {},

@@ -72,9 +72,9 @@ export function SiteFooter() {
             </p>
             <div className='mt-5 flex items-center gap-3 xsm:justify-center'>
               {FOOTER_SOCIAL.map((item) => (
-                <a
+                <Link
                   key={item.id}
-                  href={item.href}
+                  href={item.href as '/'}
                   aria-label={item.label}
                   className='inline-flex size-8 items-center justify-center text-white/80 transition-colors hover:text-[#E2B570]'
                 >
@@ -89,7 +89,7 @@ export function SiteFooter() {
                       strokeWidth={1.75}
                     />
                   )}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

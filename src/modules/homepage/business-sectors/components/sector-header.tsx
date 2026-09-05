@@ -16,12 +16,12 @@ export function SectorHeader({ eyebrow, title }: SectorHeaderProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ duration: 0.65, ease }}
-      className='mb-12 flex flex-col items-center text-center xsm:mb-8'
+      className='mb-[4rem] flex flex-col items-center text-center xsm:mb-4'
     >
-      <p className='font-work-sans text-[0.75rem] font-medium tracking-[0.45em] text-[#9CA3AF] uppercase'>
+      <p className='text-center text-[#8E909B] text-[0.875rem] leading-[1.3125rem] tracking-[0.5rem] uppercase'>
         {eyebrow}
       </p>
-      <h2 className='mt-3 font-manrope text-[2.25rem] leading-tight font-bold text-[#001E40] xsm:text-[1.65rem]'>
+      <h2 className='mt-4 font-arial text-center text-[3.5rem] leading-[5.25rem] font-bold text-[#062B68] xsm:text-[1.65rem] xsm:leading-[2.25rem] xsm:mt-2'>
         {title}
       </h2>
     </motion.div>

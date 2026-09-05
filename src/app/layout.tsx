@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Manrope, Playfair_Display, Work_Sans } from 'next/font/google'
+import { Inter, Manrope, Playfair_Display, Work_Sans, Libertinus_Serif } from 'next/font/google'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 import { LenisProvider } from '@/components/providers/lenis-provider'
@@ -30,6 +30,12 @@ const playfairDisplay = Playfair_Display({
   weight: ['400', '500', '600', '700'],
 })
 
+const libertinusSerif = Libertinus_Serif({
+  variable: '--font-libertinus-serif-family',
+  subsets: ['latin', 'vietnamese'],
+  weight: ['400', '600', '700'],
+})
+
 export const metadata: Metadata = {
   title: 'Bateco Group',
   description: 'Bateco Group',
@@ -43,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${inter.variable} ${manrope.variable} ${workSans.variable} ${playfairDisplay.variable} font-sans antialiased`}
+        className={`${inter.variable} ${manrope.variable} ${workSans.variable} ${playfairDisplay.variable} ${libertinusSerif.variable} font-sans antialiased`}
       >
         <QueryProvider>
           <NuqsAdapter>

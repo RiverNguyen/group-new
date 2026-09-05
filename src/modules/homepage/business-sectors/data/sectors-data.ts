@@ -64,14 +64,5 @@ export const BUSINESS_SECTORS_CONTENT: BusinessSectorsContent = {
       imageAlt: 'Kinh tế xanh',
       href: '#',
     },
-    {
-      id: 'green-economy',
-      index: '06',
-      title: 'KINH TẾ XANH',
-      image:
-        'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
-      imageAlt: 'Kinh tế xanh',
-      href: '#',
-    },
   ],
 }
