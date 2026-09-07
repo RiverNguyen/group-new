@@ -12,5 +12,15 @@ export const routing = defineRouting({
       en: '/about',
       cn: '/about',
     },
+    '/dieu-khoan-su-dung': {
+      vi: '/dieu-khoan-su-dung',
+      en: '/terms-of-use',
+      cn: '/使用条款',
+    },
+    '/chinh-sach-bao-mat': {
+      vi: '/chinh-sach-bao-mat',
+      en: '/privacy-policy',
+      cn: '/隐私政策',
+    },
   },
 })

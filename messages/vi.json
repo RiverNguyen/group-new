@@ -80,5 +80,166 @@
     "title": "Đã xảy ra lỗi",
     "description": "Có lỗi không mong muốn. Vui lòng thử lại.",
     "retry": "Thử lại"
+  },
+  "TermsOfUse": {
+    "navLabel": "Điều khoản sử dụng",
+    "hero": {
+      "title": "ĐIỀU KHOẢN SỬ DỤNG",
+      "description": "Cam kết về tính minh bạch và tuân thủ pháp lý trong mọi hoạt động xây dựng, đầu tư và vận hành của Bateco Group.",
+      "imageAlt": "Công trường xây dựng và kết cấu thép"
+    },
+    "general": {
+      "title": "Điều khoản chung",
+      "paragraphs": [
+        "Chào mừng bạn đến với hệ thống thông tin điện tử của Bateco Group. Bằng việc truy cập và sử dụng trang web này, bạn mặc nhiên chấp nhận và đồng ý bị ràng buộc bởi các điều khoản và điều kiện được nêu tại đây.",
+        "Bateco Group có quyền thay đổi, chỉnh sửa, thêm hoặc lược bỏ bất kỳ phần nào trong Điều khoản sử dụng này vào bất cứ lúc nào. Các thay đổi có hiệu lực ngay khi được đăng trên trang web mà không cần thông báo trước."
+      ],
+      "bullets": [
+        {
+          "label": "Phạm vi áp dụng",
+          "text": "Toàn bộ hệ sinh thái số của Bateco."
+        },
+        {
+          "label": "Đối tượng",
+          "text": "Tất cả cá nhân, tổ chức truy cập hoặc sử dụng dịch vụ."
+        },
+        {
+          "label": "Mục đích",
+          "text": "Đảm bảo môi trường đầu tư và hợp tác minh bạch."
+        }
+      ]
+    },
+    "rights": {
+      "title": "Quyền và trách nhiệm của người dùng",
+      "cards": [
+        {
+          "title": "Quyền hạn",
+          "text": "Người dùng được phép truy cập, tra cứu thông tin dự án, báo cáo đầu tư và gửi yêu cầu tư vấn chính thức thông qua các cổng giao tiếp được chỉ định."
+        },
+        {
+          "title": "Trách nhiệm",
+          "text": "Không được phép sử dụng bất kỳ thiết bị, phần mềm nào nhằm can thiệp hoặc nỗ lực can thiệp vào hoạt động bình thường của trang web."
+        }
+      ]
+    },
+    "intellectual": {
+      "title": "Sở hữu trí tuệ",
+      "text": "Mọi nội dung bao gồm nhưng không giới hạn ở văn bản, thiết kế đồ họa, biểu tượng, hình ảnh, video và mã nguồn đều là tài sản độc quyền của Bateco Group hoặc các bên cấp phép liên quan."
+    },
+    "featured": {
+      "imageAlt": "Đại diện Bateco Group tại sự kiện và lễ trao giải",
+      "caption": "Xây dựng tương lai trên nền tảng pháp lý vững chắc."
+    },
+    "liability": {
+      "title": "Giới hạn trách nhiệm",
+      "highlight": "“Bateco Group không chịu trách nhiệm cho bất kỳ tổn thất hoặc thiệt hại nào, trực tiếp hoặc gián tiếp, phát sinh từ việc sử dụng hoặc không thể sử dụng trang web này.”",
+      "text": "Thông tin về các dự án đầu tư chỉ mang tính chất tham khảo tại thời điểm đăng tải. Các cam kết tài chính chính thức sẽ chỉ được xác lập thông qua hợp đồng văn bản có chữ ký của người đại diện pháp luật."
+    },
+    "law": {
+      "title": "Luật áp dụng và giải quyết tranh chấp",
+      "text": "Mọi tranh chấp phát sinh từ hoặc liên quan đến việc sử dụng trang web này sẽ được điều chỉnh bởi pháp luật nước Cộng hòa xã hội chủ nghĩa Việt Nam.",
+      "viacTitle": "TRUNG TÂM TRỌNG TÀI QUỐC TẾ VIỆT NAM (VIAC)"
+    },
+    "changes": {
+      "title": "Thay đổi điều khoản",
+      "text": "Việc bạn tiếp tục sử dụng trang web sau khi có các thay đổi đồng nghĩa với việc bạn chấp nhận các thay đổi đó. Chúng tôi khuyến khích người dùng thường xuyên kiểm tra trang này để cập nhật các thông tin mới nhất."
+    }
+  },
+  "PrivacyPolicy": {
+    "navLabel": "Chính sách bảo mật",
+    "hero": {
+      "eyebrow": "Quyền riêng tư & bảo mật",
+      "titleLead": "Chính sách",
+      "titleAccent": "bảo mật",
+      "titleEnd": "thông tin",
+      "description": "Bateco Group cam kết bảo vệ dữ liệu cá nhân của khách hàng khi truy cập và sử dụng các dịch vụ trên website bateco.com.vn. Chính sách này quy định cách chúng tôi thu thập, sử dụng và bảo mật thông tin.",
+      "imageAlt": "Chuyên gia xây dựng với bản vẽ và mũ bảo hộ"
+    },
+    "toc": {
+      "title": "Mục lục chính sách"
+    },
+    "collection": {
+      "tocLabel": "Thu thập thông tin",
+      "title": "Điều 1. Thu thập thông tin cá nhân",
+      "text": "Chúng tôi thu thập các thông tin cần thiết để phục vụ quá trình tư vấn, giao dịch và nâng cao trải nghiệm người dùng, bao gồm:",
+      "items": [
+        {
+          "label": "Thông tin định danh",
+          "text": "Họ tên, số điện thoại, email."
+        },
+        {
+          "label": "Thông tin giao dịch",
+          "text": "Lịch sử tìm kiếm dự án, yêu cầu báo giá, hợp đồng."
+        },
+        {
+          "label": "Dữ liệu kỹ thuật",
+          "text": "Địa chỉ IP, loại trình duyệt, cookies."
+        }
+      ]
+    },
+    "purpose": {
+      "tocLabel": "Mục đích sử dụng",
+      "title": "Điều 2. Mục đích sử dụng thông tin",
+      "text": "Thông tin được sử dụng nhằm mục đích nâng cao chất lượng dịch vụ và trải nghiệm của khách hàng:",
+      "cards": [
+        {
+          "title": "Cung cấp dịch vụ",
+          "text": "Tư vấn và cung cấp thông tin dự án theo yêu cầu của khách hàng."
+        },
+        {
+          "title": "Thông tin thị trường",
+          "text": "Gửi các bản tin phân tích thị trường và dự án mới định kỳ."
+        }
+      ]
+    },
+    "sharing": {
+      "tocLabel": "Chia sẻ thông tin",
+      "title": "Điều 3. Chia sẻ thông tin với bên thứ ba",
+      "text": "Bateco Group cam kết không bán hoặc cho thuê thông tin cá nhân của khách hàng cho bên thứ ba vì mục đích thương mại, trừ các trường hợp:",
+      "items": [
+        {
+          "title": "Chia sẻ nội bộ",
+          "text": "Chia sẻ với các công ty thành viên trong hệ thống Bateco Group để phục vụ dự án."
+        },
+        {
+          "title": "Yêu cầu pháp lý",
+          "text": "Tuân thủ các yêu cầu của cơ quan nhà nước có thẩm quyền theo pháp luật Việt Nam."
+        }
+      ]
+    },
+    "storage": {
+      "tocLabel": "Lưu trữ & bảo mật",
+      "title": "Điều 4. Lưu trữ và Bảo mật dữ liệu",
+      "highlight": "Chúng tôi áp dụng hệ thống bảo mật đa tầng nhằm đảm bảo dữ liệu tại bateco.com.vn luôn an toàn tuyệt đối:",
+      "pills": [
+        "Lưu trữ điện toán đám mây an toàn",
+        "Mã hóa dữ liệu AES-256",
+        "Phòng chống xâm nhập IDS/IPS"
+      ]
+    },
+    "rights": {
+      "tocLabel": "Quyền khách hàng",
+      "title": "Điều 5. Quyền của khách hàng",
+      "items": [
+        {
+          "title": "Quyền yêu cầu thông tin và thay đổi",
+          "text": "Khách hàng có quyền yêu cầu truy cập, chỉnh sửa hoặc xóa dữ liệu cá nhân đã cung cấp cho chúng tôi."
+        },
+        {
+          "title": "Quyền từ chối tiếp thị",
+          "text": "Khách hàng có quyền từ chối nhận các thông tin quảng cáo, tiếp thị từ Bateco Group bất kỳ lúc nào."
+        }
+      ]
+    },
+    "validity": {
+      "tocLabel": "Hiệu lực thi hành",
+      "title": "Điều 6. Hiệu lực thi hành",
+      "text": "Chính sách bảo mật này có hiệu lực kể từ ngày được công bố trên website. Bateco Group có quyền điều chỉnh chính sách khi cần thiết và sẽ thông báo trên trang này."
+    },
+    "contact": {
+      "title": "Mọi thắc mắc xin liên hệ?",
+      "text": "Nếu bạn có bất kỳ câu hỏi nào liên quan đến quyền riêng tư, vui lòng liên hệ bộ phận hỗ trợ của chúng tôi.",
+      "button": "Gửi Email Hỗ Trợ"
+    }
   }
 }
