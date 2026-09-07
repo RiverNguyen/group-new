@@ -1,3 +1,5 @@
+import ROUTES from '@/configs/routes'
+
 export type FooterContact = {
   id: 'hotline' | 'email' | 'address'
   label: string
@@ -60,8 +62,8 @@ export const FOOTER_TERMS: FooterLinkGroup = {
   title: 'Điều khoản',
   columns: [
     [
-      { label: 'Chính sách bảo mật', href: '#' },
-      { label: 'Điều khoản sử dụng', href: '#' },
+      { label: 'Chính sách bảo mật', href: ROUTES.privacyPolicy },
+      { label: 'Điều khoản sử dụng', href: ROUTES.termsOfUse },
       { label: 'Quy tắc ứng xử', href: '#' },
     ],
   ],

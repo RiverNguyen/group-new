@@ -38,6 +38,7 @@ export function SiteHeader() {
               alt={HEADER_BRAND.name}
               width={240}
               height={76}
+              loading='eager'
               className='h-[3.5rem] w-auto object-cover xsm:h-[2.5rem]'
             />
           </Link>
