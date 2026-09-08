@@ -1,4 +1,3 @@
-/** Danh mục thật của một bài viết — khớp `category` trong payload. */
 export const ARTICLE_CATEGORY_VALUES = [
   'su-kien',
   'tin-doanh-nghiep',
@@ -8,7 +7,6 @@ export const ARTICLE_CATEGORY_VALUES = [
 
 export type ArticleCategory = (typeof ARTICLE_CATEGORY_VALUES)[number]
 
-/** Giá trị hợp lệ của tham số `?cat=`: thêm `all` cho pill "Tất cả" (không phải danh mục). */
 export const ARTICLE_FILTER_VALUES = ['all', ...ARTICLE_CATEGORY_VALUES] as const
 
 export type ArticleFilter = (typeof ARTICLE_FILTER_VALUES)[number]

@@ -1,9 +1,5 @@
 import type { RefObject } from 'react'
 
-/**
- * Đặt tiến độ thanh ngang bằng cách ghi thẳng transform, không qua state: hàm này chạy mỗi
- * khung hình theo autoplay của Swiper nên re-render React ở nhịp đó là lãng phí.
- */
 export function setBarProgress(bar: HTMLSpanElement | null, ratio: number) {
   if (!bar) return
 

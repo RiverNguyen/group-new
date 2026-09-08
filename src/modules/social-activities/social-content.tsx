@@ -13,14 +13,10 @@ import {
 } from '@/modules/social-activities/data/filters-data'
 import { ArticleList } from '@/modules/social-activities/sections/article-list'
 
-// Khai ở cấp module để tham chiếu ổn định giữa các lần render — useListFilters ghi nhớ keymap
-// theo tham chiếu, nếu dựng lại mỗi lần render thì nuqs đăng ký lại listener liên tục.
-// `page` do hook tự giữ nên không khai ở đây.
 const parsers = {
   cat: parseAsStringLiteral(ARTICLE_FILTER_VALUES).withDefault('all').withOptions({
     history: 'push',
   }),
-  // Gõ phím nào cũng đẩy một entry vào history thì nút Back thành vô dụng: replace + debounce.
   q: parseAsString.withDefault('').withOptions({
     history: 'replace',
     limitUrlUpdates: debounce(300),
@@ -39,7 +35,6 @@ type ArticleFilters = {
 const filterArticles = (articles: Article[], { cat, q, sort }: ArticleFilters): Article[] => {
   const keyword = normalizeVietnamese(q)
 
-  // normalizeVietnamese bỏ dấu cả hai vế nên gõ "hoat dong" vẫn khớp "hoạt động".
   const matched = articles.filter((article) => {
     if (cat !== 'all' && article.category !== cat) return false
     if (!keyword) return true
@@ -49,7 +44,6 @@ const filterArticles = (articles: Article[], { cat, q, sort }: ArticleFilters): 
     ).includes(keyword)
   })
 
-  // `matched` đã là mảng mới từ filter nên sort tại chỗ không đụng vào mảng gốc của props.
   return matched.sort((a, b) =>
     sort === 'newest'
       ? b.publishedAt.localeCompare(a.publishedAt)

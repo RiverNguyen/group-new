@@ -10,7 +10,6 @@ export type ProjectSector = (typeof PROJECT_SECTOR_VALUES)[number]
 
 export type Project = {
   id: string
-  /** Số thứ tự in lớn trên card, giữ dạng chuỗi vì thiết kế luôn có số 0 ở đầu */
   index: string
   title: string
   sector: ProjectSector
@@ -22,8 +21,6 @@ export type Project = {
 
 export const PROJECTS_PER_PAGE = 6
 
-// Dữ liệu mẫu: 15 dự án chia đều 5 lĩnh vực để bộ lọc và phân trang (3 trang) chạy thật.
-// Đặt tên trường theo payload API dự kiến, đổi nguồn dữ liệu chỉ phải sửa lớp fetch.
 export const PROJECTS: Project[] = [
   {
     id: 'trung-tam-dich-vu-cong-nghiep-bac-ninh',

@@ -1,6 +1,5 @@
 export type FeaturedProject = {
   id: string
-  /** Nhãn vàng trên ảnh — Figma viết hoa toàn bộ, dữ liệu giữ nguyên văn */
   chip: string
   title: string
   image: string
@@ -8,7 +7,6 @@ export type FeaturedProject = {
   href: string
 }
 
-// Thanh progress trong Figma dài đúng 1/4 chiều rộng card nên thiết kế dành cho 4 slide.
 export const FEATURED_PROJECTS: FeaturedProject[] = [
   {
     id: 'apec-2027',

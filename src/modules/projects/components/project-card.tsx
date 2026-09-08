@@ -5,13 +5,9 @@ import type { Project } from '@/modules/projects/data/projects-data'
 
 type ProjectCardProps = {
   project: Project
-  /** `sizes` cho next/image, tính theo bề rộng thật của card ở từng khổ lưới */
   imageSizes: string
 }
 
-// Figma vẽ 6 card theo 3 bố cục khác nhau (card 01 có CTA, card 02 đẩy số ra giữa, card 03–06
-// bỏ CTA). Nội dung cùng loại mà trình bày khác nhau thì lưới đọc rất lộn xộn, nên dùng chung
-// một bố cục — bố cục của card 01 vì nó đủ cả 4 lớp thông tin.
 export function ProjectCard({ project, imageSizes }: ProjectCardProps) {
   return (
     <article className='group relative aspect-[458.67/469.33] min-w-0 overflow-hidden rounded-[0.5rem] bg-[#1E2020] shadow-[0_8px_10px_-6px_rgba(0,0,0,0.1),0_20px_25px_-5px_rgba(0,0,0,0.1)]'>

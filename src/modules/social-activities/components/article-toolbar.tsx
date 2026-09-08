@@ -50,8 +50,6 @@ export function ArticleToolbar({
               role='tab'
               aria-selected={isActive}
               onClick={() => onCategoryChange(item.value)}
-              // Ở khổ hẹp 1rem = 16px nên padding desktop chỉ cho ra ~40px, dưới ngưỡng chạm 44px
-              // của WCAG 2.5.5. Nới thêm padding dọc riêng cho `xsm`, khổ lớn giữ nguyên như Figma.
               className={cn(
                 'shrink-0 cursor-pointer rounded-full px-[1.5rem] py-[0.625rem] xsm:py-[0.75rem] font-arial text-[0.875rem] leading-5 whitespace-nowrap transition-colors',
                 isActive
@@ -65,16 +63,12 @@ export function ArticleToolbar({
         })}
       </div>
 
-      {/* Ở xsm font input bị nâng lên 16px (chống auto-zoom iOS) nên 343px không đủ cho cả
-          ô tìm kiếm lẫn dropdown trên một hàng — xuống dòng, mỗi thứ một hàng đủ rộng. */}
       <div className='flex shrink-0 items-center gap-[0.75rem] xlg:w-full xsm:flex-col xsm:items-stretch'>
         <div className='relative h-[2.4375rem] w-[16rem] xlg:w-auto xlg:flex-1 xsm:w-full xsm:flex-none'>
           <Search
             aria-hidden
             className='pointer-events-none absolute top-1/2 left-[0.75rem] size-[0.9375rem] -translate-y-1/2 text-[#9CA3AF]'
           />
-          {/* Không kiểm soát giá trị: ô search debounce 300ms nên URL luôn chậm hơn phím gõ,
-              nếu bind value theo URL thì con trỏ nhảy về cuối và mất chữ đang gõ. */}
           <input
             type='search'
             defaultValue={q}
@@ -85,8 +79,6 @@ export function ArticleToolbar({
           />
         </div>
 
-        {/* Sàn font 16px ở nhánh xsm: rem tính theo vw nên 0.875rem chỉ còn ~12-16px trên khổ
-            iPhone, dưới ngưỡng 16px khiến iOS Safari tự zoom khi focus và trang dịch chỗ. */}
         <div className='relative h-[2.625rem] w-[8.625rem] shrink-0 xsm:w-full'>
           <ArrowUpDown
             aria-hidden

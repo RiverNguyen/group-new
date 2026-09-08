@@ -18,10 +18,6 @@ export function FeaturedArticle({ article }: FeaturedArticleProps) {
           aria-hidden
           className='absolute top-1/2 left-0 h-[2.5rem] w-[0.25rem] -translate-y-1/2 bg-[#F4B700]'
         />
-        {/* Figma tô chữ #F4B700 trên nền trắng (1.81:1) — chuyển sang #946E0E
-            (4.67:1). Thanh 4×40 vẫn giữ #F4B700 vì là hình khối, không ràng buộc contrast.
-            Dùng hex thay class token vì `@theme` trong globals.css hiện chưa sinh ra utility
-            `text-gold-on-light`/`bg-gold` — đổi lại thành token khi utility đó chạy được. */}
         <h2 className='pl-[1.5rem] font-arial text-[3rem] leading-[3.5rem] font-bold tracking-[-0.075rem] text-[#946E0E] uppercase xlg:text-[2.25rem] xlg:leading-[2.75rem] xsm:text-[1.75rem] xsm:leading-[2.25rem] xsm:tracking-normal'>
           Bài viết nổi bật
         </h2>
@@ -36,9 +32,6 @@ export function FeaturedArticle({ article }: FeaturedArticleProps) {
           className='absolute top-0 left-0 z-10 h-px w-[28rem] max-w-full bg-[linear-gradient(90deg,rgba(174,198,255,0.4)_0%,rgba(174,198,255,0)_100%)]'
         />
 
-        {/* Chốt bề rộng 845px của Figma bằng rem thay vì tỉ lệ flex: rem = 1vw nên thẻ luôn
-            rộng 84rem, 52.8125rem + 31.1875rem khớp đúng 845 + 499. Dùng flex-grow thì phần
-            padding 48px của cột nội dung bị trừ khỏi free space và cột ảnh hụt mất 60px. */}
         <div className='relative w-[52.8125rem] shrink-0 xlg:aspect-[16/9] xlg:w-full'>
           <Image
             src={article.image}
@@ -69,8 +62,6 @@ export function FeaturedArticle({ article }: FeaturedArticleProps) {
             {article.title}
           </h3>
 
-          {/* Figma tô #C4C6D1 trên thẻ nền trắng (1.6:1) — dùng #6B7280 như trích dẫn của
-              card lưới bên dưới để cùng một cấp thông tin có cùng độ tương phản. */}
           <p className='mt-[1.5rem] line-clamp-4 font-inter text-[1rem] leading-[1.625rem] text-[#6B7280]'>
             {article.excerpt}
           </p>

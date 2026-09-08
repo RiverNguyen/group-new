@@ -16,13 +16,9 @@ export type PageHeroContent = {
 }
 
 type PageHeroProps = PageHeroContent & {
-  /** 'start' = QH cổ đông, Dự án · 'center' = Hoạt động xã hội */
   align?: 'start' | 'center'
-  /** Chiều cao khối nội dung. QH cổ đông/Dự án 500px · Tin tức 600px */
   heightClassName?: string
-  /** Gạch vàng 96×1 dưới subtitle — chỉ /tin-tuc/hoat-dong-xa-hoi có */
   divider?: boolean
-  /** Node Figma của khối nội dung, để lần sau dò ngược thiết kế */
   figmaNode?: string
 }
 
@@ -38,11 +34,6 @@ export function PageHero({
   figmaNode,
 }: PageHeroProps) {
   const reduce = useReducedMotion()
-  // `initial` phải giống nhau giữa server và lần render đầu trên client. useReducedMotion()
-  // đọc media query nên trả null khi render trên server (không có media query) nhưng có thể
-  // trả true ngay ở lần render đầu trên client — nếu để `initial` phụ thuộc vào nó thì inline
-  // style lệch nhau và React báo hydration mismatch. Vì vậy chỉ tắt animation qua `duration`:
-  // `transition` không sinh ra inline style nên khác nhau giữa hai bên là vô hại.
   const dur = (seconds: number) => (reduce ? 0 : seconds)
 
   const centered = align === 'center'

@@ -24,7 +24,6 @@ export function ArticleCard({ article }: ArticleCardProps) {
       </div>
 
       <div className='flex flex-1 flex-col p-[1.5rem]'>
-        {/* Figma dùng #D97706 (3.6:1) cho chữ 12px — dưới ngưỡng AA nên đổi #B45309 (5.9:1). */}
         <p className='font-arial text-[0.75rem] leading-4 tracking-[0.0375rem] text-[#B45309] uppercase'>
           {article.categoryLabel} •{' '}
           <time dateTime={article.publishedAt}>{formatArticleDate(article.publishedAt)}</time>
@@ -43,8 +42,6 @@ export function ArticleCard({ article }: ArticleCardProps) {
           className='mt-auto inline-flex w-fit items-center gap-[0.25rem] pt-[1.5rem] font-playfair text-[0.875rem] leading-5 font-bold text-[#062B68] transition-colors hover:text-[#0A47A9]'
         >
           Xem chi tiết
-          {/* Trang có 9 link "Xem chi tiết" giống hệt nhau — thêm tiêu đề ẩn để trình đọc màn
-              hình phân biệt được từng link khi liệt kê. */}
           <span className='sr-only'>: {article.title}</span>
           <ArrowRight
             aria-hidden

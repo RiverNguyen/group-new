@@ -6,9 +6,6 @@ export type HeroContent = {
   imageAlt: string
 }
 
-// Frame Figma của trang này dán nhầm nội dung của trang Quan hệ cổ đông (badge "QUAN HỆ CỔ
-// ĐÔNG", tiêu đề "Công bố thông tin"). Copy dưới đây là bản tiếng Việt đã được chủ dự án
-// duyệt cho trang Dự án — sửa nội dung hero thì sửa đúng ở đây.
 export const PROJECTS_HERO: HeroContent = {
   badge: 'DỰ ÁN',
   title: 'Dấu ấn Bateco trên mỗi công trình',
@@ -21,7 +18,6 @@ export const PROJECTS_HERO: HeroContent = {
 
 export type PageTitleContent = {
   title: string
-  /** Số nền cỡ lớn, thuần trang trí — xem `sections/page-title.tsx` */
   watermark: string
 }
 

@@ -28,8 +28,6 @@ export function BreadcrumbBar() {
       >
         <BreadcrumbList className='flex-nowrap gap-[0.5rem] whitespace-nowrap'>
           <BreadcrumbItem>
-            {/* Figma tô #C4C6D1 nhưng thanh nằm trên nền trắng nên chỉ đạt 1.6:1 — dùng
-                #6B7280 (4.83:1) như các chữ phụ khác của trang. */}
             <BreadcrumbLink
               asChild
               className={`${itemClassName} text-[#6B7280] hover:text-[#062B68]`}
@@ -42,7 +40,6 @@ export function BreadcrumbBar() {
             <ChevronRight />
           </BreadcrumbSeparator>
 
-          {/* /tin-tuc chưa có trang nên để chữ thường, không dựng link chết. */}
           <BreadcrumbItem className={`${itemClassName} text-[#6B7280]`}>Tin tức</BreadcrumbItem>
 
           <BreadcrumbSeparator className={separatorClassName}>

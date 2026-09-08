@@ -11,7 +11,6 @@ export type Article = {
   excerpt: string
   category: ArticleCategory
   categoryLabel: string
-  /** ISO `YYYY-MM-DD` để sắp xếp và định dạng lại được; hiển thị qua `formatArticleDate`. */
   publishedAt: string
   image: string
   imageAlt: string
@@ -20,27 +19,18 @@ export type Article = {
 
 export const ARTICLES_PER_PAGE = 9
 
-/**
- * Chuỗi ISO chỉ có ngày nên `parseISO` dựng Date theo giờ địa phương — server và client cho ra
- * cùng con số, không sinh hydration mismatch như khi dùng `new Date(...).toLocaleDateString()`.
- */
 export function formatArticleDate(publishedAt: string): string {
   return format(parseISO(publishedAt), 'dd/MM/yyyy')
 }
 
 type ArticleSeed = Omit<Article, 'categoryLabel' | 'href'>
 
-// Nhãn danh mục và href suy ra từ `category` nên không lặp lại trong từng bản ghi. Khi nối API
-// thật, payload trả sẵn hai trường này và chỉ việc bỏ bước map — kiểu `Article` giữ nguyên.
 const toArticle = (seed: ArticleSeed): Article => ({
   ...seed,
   categoryLabel: CATEGORY_LABELS[seed.category],
   href: '#',
 })
 
-// `imageAlt` mô tả đúng thứ nhìn thấy trong ảnh, không mô tả nội dung bài viết: người dùng
-// trình đọc màn hình nghe alt thay cho ảnh, alt sai là dẫn họ tới một hình không tồn tại.
-// Mọi ảnh dưới đây đã được xem trực tiếp trước khi ghép vào bài.
 const unsplash = (id: string, width: number) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width}&q=80`
 

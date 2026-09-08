@@ -1,8 +1,6 @@
 import { ProjectCard } from '@/modules/projects/components/project-card'
 import type { Project } from '@/modules/projects/data/projects-data'
 
-// Lưới 3 cột ở ≥1025px, 2 cột ở tablet, 1 cột ở màn hẹp — `sizes` phải khớp để next/image
-// không tải ảnh to gấp ba lần cần thiết.
 const IMAGE_SIZES = '(max-width: 639px) 100vw, (max-width: 1024px) 45vw, 29vw'
 
 export function ProjectGrid({ items }: { items: Project[] }) {

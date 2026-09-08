@@ -58,9 +58,6 @@
 }
 
 @theme {
-  /* Vàng thương hiệu. #F4B700 trên nền navy #062B68 đạt 7.48:1, nhưng trên nền trắng chỉ
-     1.81:1 nên không dùng cho chữ ở nền sáng — dùng --color-gold-on-light (4.67:1). Gạch,
-     viền, nền chip vẫn dùng --color-gold vì không phải chữ, không ràng buộc contrast. */
   --color-gold: #f4b700;
   --color-gold-on-light: #946e0e;
 }

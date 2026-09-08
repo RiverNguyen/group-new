@@ -17,8 +17,6 @@ export function FeaturedCarousel({ items }: { items: FeaturedProject[] }) {
   const reduce = useReducedMotion()
   const swiperRef = useRef<SwiperType | null>(null)
   const barRef = useRef<HTMLSpanElement | null>(null)
-  // Con trỏ và bàn phím có thể cùng lúc "giữ" carousel; nhớ riêng từng nguồn để khi rời chuột
-  // mà vẫn đang focus thì autoplay không tự chạy lại.
   const hoverRef = useRef(false)
   const focusRef = useRef(false)
 
@@ -71,8 +69,6 @@ export function FeaturedCarousel({ items }: { items: FeaturedProject[] }) {
           speed={800}
           loop={items.length > 1}
           keyboard={{ enabled: true }}
-          // Người chọn giảm chuyển động thì chỉ còn prev/next; thanh progress cũng đứng yên
-          // vì onAutoplayTimeLeft không bắn nữa.
           autoplay={reduce ? false : { delay: 6000, disableOnInteraction: false }}
           onSwiper={(swiper) => {
             swiperRef.current = swiper
@@ -121,7 +117,6 @@ export function FeaturedCarousel({ items }: { items: FeaturedProject[] }) {
           ))}
         </Swiper>
 
-        {/* Hai vệt sáng viền là trang trí của cả card, không thuộc slide nào */}
         <span
           aria-hidden
           className='pointer-events-none absolute inset-x-0 top-0 z-20 h-px bg-[linear-gradient(90deg,rgba(216,226,255,0.4)_0%,rgba(216,226,255,0)_100%)]'
