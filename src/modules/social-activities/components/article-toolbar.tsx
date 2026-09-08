@@ -50,8 +50,10 @@ export function ArticleToolbar({
               role='tab'
               aria-selected={isActive}
               onClick={() => onCategoryChange(item.value)}
+              // Ở khổ hẹp 1rem = 16px nên padding desktop chỉ cho ra ~40px, dưới ngưỡng chạm 44px
+              // của WCAG 2.5.5. Nới thêm padding dọc riêng cho `xsm`, khổ lớn giữ nguyên như Figma.
               className={cn(
-                'shrink-0 cursor-pointer rounded-full px-[1.5rem] py-[0.625rem] font-arial text-[0.875rem] leading-5 whitespace-nowrap transition-colors',
+                'shrink-0 cursor-pointer rounded-full px-[1.5rem] py-[0.625rem] xsm:py-[0.75rem] font-arial text-[0.875rem] leading-5 whitespace-nowrap transition-colors',
                 isActive
                   ? 'bg-[#062B68] text-white shadow-[0_2px_4px_-2px_rgba(0,0,0,0.1),0_4px_6px_-1px_rgba(0,0,0,0.1)]'
                   : 'text-[#374151] hover:text-[#062B68]',

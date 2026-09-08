@@ -21,7 +21,7 @@ export function ListPagination({ page, totalPages, onChange }: ListPaginationPro
         type='button'
         onClick={() => onChange(page - 1)}
         disabled={page === 1}
-        className='cursor-pointer rounded-full border border-[#D1D5DB] bg-white px-[1rem] py-[0.5rem] font-inter text-[0.875rem] leading-5 font-medium text-[#6B7280] transition-colors enabled:hover:text-[#062B68] disabled:cursor-not-allowed disabled:opacity-50'
+        className='cursor-pointer rounded-full border border-[#D1D5DB] bg-white px-[1rem] py-[0.5rem] xsm:py-[0.6875rem] font-inter text-[0.875rem] leading-5 font-medium text-[#6B7280] transition-colors enabled:hover:text-[#062B68] disabled:cursor-not-allowed disabled:opacity-50'
       >
         Trước
       </button>
@@ -36,7 +36,7 @@ export function ListPagination({ page, totalPages, onChange }: ListPaginationPro
             onClick={() => onChange(value)}
             aria-current={isActive ? 'page' : undefined}
             className={cn(
-              'size-[2.5rem] cursor-pointer rounded-full font-inter text-[0.875rem] leading-5 font-bold transition-colors',
+              'size-[2.5rem] xsm:size-[2.75rem] cursor-pointer rounded-full font-inter text-[0.875rem] leading-5 font-bold transition-colors',
               isActive
                 ? 'bg-[#062B68] text-white shadow-[0_1px_2px_rgba(0,0,0,0.05)]'
                 : 'border border-[#D1D5DB] bg-white text-[#062B68] hover:bg-[#EFF6FF]',
@@ -51,7 +51,7 @@ export function ListPagination({ page, totalPages, onChange }: ListPaginationPro
         type='button'
         onClick={() => onChange(page + 1)}
         disabled={page === totalPages}
-        className='cursor-pointer rounded-full border border-[#D1D5DB] bg-white px-[1rem] py-[0.5rem] font-inter text-[0.875rem] leading-5 font-medium text-[#062B68] transition-colors enabled:hover:bg-[#EFF6FF] disabled:cursor-not-allowed disabled:opacity-50'
+        className='cursor-pointer rounded-full border border-[#D1D5DB] bg-white px-[1rem] py-[0.5rem] xsm:py-[0.6875rem] font-inter text-[0.875rem] leading-5 font-medium text-[#062B68] transition-colors enabled:hover:bg-[#EFF6FF] disabled:cursor-not-allowed disabled:opacity-50'
       >
         Sau
       </button>
