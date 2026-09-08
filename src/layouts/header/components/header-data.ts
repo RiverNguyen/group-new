@@ -27,7 +27,7 @@ export const HEADER_NAV: NavItem[] = [
     label: 'Lĩnh vực kinh doanh',
     href: '/linh-vuc-kinh-doanh',
     children: [
-      { label: 'Dịch vụ công nghiệp', href: '#' },
+      { label: 'Dịch vụ công nghiệp', href: '/linh-vuc-kinh-doanh/dich-vu-cong-nghiep' },
       { label: 'BĐS công nghiệp', href: '#' },
       { label: 'Bateco Land', href: '#' },
       { label: 'An ninh quốc phòng', href: '#' },

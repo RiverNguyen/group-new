@@ -22,5 +22,15 @@ export const routing = defineRouting({
       en: '/privacy-policy',
       cn: '/隐私政策',
     },
+    '/quan-he-co-dong': {
+      vi: '/quan-he-co-dong',
+      en: '/investor-relations',
+      cn: '/投资者关系',
+    },
+    '/linh-vuc-kinh-doanh/dich-vu-cong-nghiep': {
+      vi: '/linh-vuc-kinh-doanh/dich-vu-cong-nghiep',
+      en: '/business/industrial-services',
+      cn: '/业务/工业服务',
+    },
   },
 })
