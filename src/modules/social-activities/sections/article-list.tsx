@@ -33,7 +33,7 @@ export function ArticleList({
     <>
       <section
         data-figma='64:3067'
-        className='flex flex-col gap-[2rem] px-[2rem] py-[3rem] xsm:px-4'
+        className='flex flex-col gap-[2rem] px-[2rem] pt-[2.5rem] pb-[3rem] xsm:px-4 xsm:pt-[1.5rem]'
       >
         <div className='relative flex items-center px-[8rem] xlg:px-0'>
           <span

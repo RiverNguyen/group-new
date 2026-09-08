@@ -18,10 +18,8 @@ export const PROJECTS_HERO: HeroContent = {
 
 export type PageTitleContent = {
   title: string
-  watermark: string
 }
 
 export const PROJECTS_PAGE_TITLE: PageTitleContent = {
   title: 'Tất cả dự án',
-  watermark: '79',
 }

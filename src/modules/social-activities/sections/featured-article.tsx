@@ -11,7 +11,7 @@ export function FeaturedArticle({ article }: FeaturedArticleProps) {
   return (
     <section
       data-figma='64:3016'
-      className='px-[8rem] py-[8rem] xlg:px-[3rem] xlg:py-[4rem] xsm:px-4 xsm:py-[3rem]'
+      className='px-[8rem] pt-[4rem] pb-[2.5rem] xlg:px-[3rem] xlg:pt-[2.5rem] xlg:pb-[2rem] xsm:px-4 xsm:pt-[2rem] xsm:pb-[1.5rem]'
     >
       <div className='relative flex items-center'>
         <span

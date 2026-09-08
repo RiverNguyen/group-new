@@ -10,7 +10,7 @@ export function SectorFilter({ value, onChange }: SectorFilterProps) {
   return (
     <section
       data-figma='64:2384'
-      className='flex w-full flex-col gap-[1rem] px-[2rem] py-[3rem] xsm:px-0 xsm:py-6'
+      className='flex w-full flex-col gap-[1rem] px-[2rem] pt-[0.5rem] pb-[3rem] xsm:px-0 xsm:pt-1 xsm:pb-6'
     >
       <h2 className='font-work-sans text-[0.875rem] leading-[1.25rem] font-semibold tracking-[0.175rem] text-gold-on-light uppercase'>
         Phân loại lĩnh vực
