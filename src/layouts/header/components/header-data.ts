@@ -40,7 +40,7 @@ export const HEADER_NAV: NavItem[] = [
     label: 'Tin tức',
     href: '/tin-tuc',
     children: [
-      { label: 'Hoạt động xã hội', href: '/tin-tuc/cong-ty' },
+      { label: 'Hoạt động xã hội', href: '/tin-tuc/hoat-dong-xa-hoi' },
       { label: 'Văn hóa Bateco', href: '/tin-tuc/nganh' },
     ],
   },

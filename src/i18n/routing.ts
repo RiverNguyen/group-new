@@ -32,5 +32,15 @@ export const routing = defineRouting({
       en: '/business/industrial-services',
       cn: '/业务/工业服务',
     },
+    '/du-an': {
+      vi: '/du-an',
+      en: '/projects',
+      cn: '/项目',
+    },
+    '/tin-tuc/hoat-dong-xa-hoi': {
+      vi: '/tin-tuc/hoat-dong-xa-hoi',
+      en: '/news/social-activities',
+      cn: '/新闻/社会活动',
+    },
   },
 })
