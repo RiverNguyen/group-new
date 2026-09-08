@@ -20,7 +20,7 @@ function TitleParts({
           ))}
         </span>
       ) : null}
-      <span className={`inline-flex items-center text-[#BB9650] ${gapClassName}`}>
+      <span className={`inline-flex items-center text-[#FFD887] ${gapClassName}`}>
         {accent.map((part, index) => (
           <span key={`${part}-${index}`}>{part}</span>
         ))}
@@ -44,7 +44,7 @@ export function highlightLastWords(text: string) {
 
   const chars = [...text]
   if (chars.length <= ACCENT_COUNT) {
-    return <span className='text-[#BB9650]'>{text}</span>
+    return <span className='text-[#FFD887]'>{text}</span>
   }
 
   return (
