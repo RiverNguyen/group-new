@@ -1,8 +1,8 @@
 'use client'
 
 import { motion, useReducedMotion } from 'motion/react'
-import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 import { TERMS_IMAGES } from '@/modules/termsofuse/data/terms-data'
 
@@ -14,11 +14,11 @@ export function FeaturedBanner() {
 
   return (
     <motion.figure
-      className='group relative overflow-hidden rounded-xl'
-      initial={reduce ? false : { opacity: 0, y: 20 }}
+      className='group relative overflow-hidden rounded-xl print:!opacity-100 print:!transform-none'
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.75, ease }}
+      transition={{ duration: reduce ? 0 : 0.75, ease }}
     >
       <Image
         src={TERMS_IMAGES.featured.src}

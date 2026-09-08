@@ -108,7 +108,9 @@ export function PrivacyToc() {
       style={{ '--privacy-toc-top': `${headerOffset}px` } as CSSProperties}
       className={cn(
         'sticky top-[6.4rem] self-start lg:w-[280px] xlg:top-[var(--privacy-toc-top)] xlg:z-20 xlg:border-b xlg:border-[#E6EAEF] xlg:bg-white/94 xlg:py-3.5 xlg:backdrop-blur-md tablet:px-[40px] xsm:px-4',
-        !reduce && 'xlg:transition-[top] xlg:duration-500',
+        // Dùng biến thể motion-safe thay cho `!reduce &&`: className suy từ useReducedMotion()
+        // sẽ khác nhau giữa server (trả null) và client, gây hydration mismatch.
+        'xlg:motion-safe:transition-[top] xlg:motion-safe:duration-500',
       )}
     >
       <p className='mb-5 font-semibold tracking-[0.14em] text-[0.72rem] text-[#BB9650] uppercase xlg:sr-only'>
