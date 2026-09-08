@@ -47,7 +47,7 @@ export function NavLink({ item }: { item: NavItem }) {
 
   return (
     <div
-      className='relative'
+      className='relative flex items-center'
       onMouseEnter={openMenu}
       onMouseLeave={scheduleClose}
     >
