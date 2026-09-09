@@ -1,0 +1,60 @@
+import { cn } from '@/lib/utils'
+
+type DocumentPaginationProps = {
+  page: number
+  totalPages: number
+  onChange: (page: number) => void
+}
+
+export function DocumentPagination({ page, totalPages, onChange }: DocumentPaginationProps) {
+  if (totalPages <= 1) return null
+
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
+
+  return (
+    <nav
+      aria-label='Phân trang tài liệu'
+      data-figma='64:2242'
+      className='flex w-full items-center justify-center gap-[0.5rem]'
+    >
+      <button
+        type='button'
+        onClick={() => onChange(page - 1)}
+        disabled={page === 1}
+        className='cursor-pointer rounded-full border border-[#D1D5DB] bg-white px-[1rem] py-[0.5rem] font-inter text-[0.875rem] leading-[1.25rem] font-medium text-[#6B7280] transition-colors enabled:hover:text-[#062B68] disabled:cursor-not-allowed disabled:opacity-50'
+      >
+        Trước
+      </button>
+
+      {pages.map((value) => {
+        const isActive = value === page
+
+        return (
+          <button
+            key={value}
+            type='button'
+            onClick={() => onChange(value)}
+            aria-current={isActive ? 'page' : undefined}
+            className={cn(
+              'size-[2.5rem] cursor-pointer rounded-full font-inter text-[0.875rem] leading-[1.25rem] font-bold transition-colors',
+              isActive
+                ? 'bg-[#062B68] text-white shadow-[0_1px_3px_rgba(6,43,104,0.3)]'
+                : 'border border-[#D1D5DB] bg-white text-[#062B68] hover:bg-[#EFF6FF]',
+            )}
+          >
+            {value}
+          </button>
+        )
+      })}
+
+      <button
+        type='button'
+        onClick={() => onChange(page + 1)}
+        disabled={page === totalPages}
+        className='cursor-pointer rounded-full border border-[#D1D5DB] bg-white px-[1rem] py-[0.5rem] font-inter text-[0.875rem] leading-[1.25rem] font-medium text-[#062B68] transition-colors enabled:hover:bg-[#EFF6FF] disabled:cursor-not-allowed disabled:opacity-50'
+      >
+        Sau
+      </button>
+    </nav>
+  )
+}

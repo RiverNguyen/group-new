@@ -1,6 +1,6 @@
 import { Globe, Youtube } from 'lucide-react'
-import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 import { Container } from '@/components/site/container'
 import ROUTES from '@/configs/routes'

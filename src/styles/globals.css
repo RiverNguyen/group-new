@@ -57,6 +57,11 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
+@theme {
+  --color-gold: #f4b700;
+  --color-gold-on-light: #946e0e;
+}
+
 html {
   font-size: 1vw;
 }

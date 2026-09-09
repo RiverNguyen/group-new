@@ -8,13 +8,13 @@ import { UserRightsSection } from '@/modules/termsofuse/sections/user-rights'
 
 export function TermsSections() {
   return (
-      <Container className='md:mt-10 rounded-none md:rounded-xl bg-[#F4F6F8] p-5 md:p-10'>
-          <GeneralTermsSection />
-          <UserRightsSection />
-          <IntellectualPropertySection />
-          <LiabilitySection />
-          <ApplicableLawSection />
-          <TermsChangesSection />
-      </Container>
+    <Container className='md:mt-10 rounded-none md:rounded-xl bg-[#F4F6F8] p-5 md:p-10'>
+      <GeneralTermsSection />
+      <UserRightsSection />
+      <IntellectualPropertySection />
+      <LiabilitySection />
+      <ApplicableLawSection />
+      <TermsChangesSection />
+    </Container>
   )
 }

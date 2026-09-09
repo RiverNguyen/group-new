@@ -5,6 +5,8 @@ import type { ReactNode } from 'react'
 
 const ease = [0.32, 0.72, 0, 1] as const
 
+const PRINT_RESET = 'print:!opacity-100 print:!transform-none'
+
 type RevealProps = {
   children: ReactNode
   className?: string
@@ -16,18 +18,24 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
 
   return (
     <motion.div
-      className={className}
-      initial={reduce ? false : { opacity: 0, y: 28 }}
+      className={[className, PRINT_RESET].filter(Boolean).join(' ')}
+      initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.7, ease, delay }}
+      transition={{ duration: reduce ? 0 : 0.7, ease, delay: reduce ? 0 : delay }}
     >
       {children}
     </motion.div>
   )
 }
 
-export function RevealStagger({ children, className }: { children: ReactNode; className?: string }) {
+export function RevealStagger({
+  children,
+  className,
+}: {
+  children: ReactNode
+  className?: string
+}) {
   const reduce = useReducedMotion()
 
   return (
@@ -53,13 +61,13 @@ export function RevealItem({ children, className }: { children: ReactNode; class
 
   return (
     <motion.div
-      className={className}
+      className={[className, PRINT_RESET].filter(Boolean).join(' ')}
       variants={{
-        hidden: reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 },
+        hidden: { opacity: 0, y: 18 },
         visible: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.55, ease },
+          transition: { duration: reduce ? 0 : 0.55, ease },
         },
       }}
     >
