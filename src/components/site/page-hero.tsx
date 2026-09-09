@@ -3,9 +3,8 @@
 import { motion, useReducedMotion } from 'motion/react'
 import Image from 'next/image'
 
+import { HERO_DELAY, HERO_DURATION, HERO_EASE } from '@/components/site/hero-motion'
 import { cn } from '@/lib/utils'
-
-const ease = [0.32, 0.72, 0, 1] as const
 
 export type PageHeroContent = {
   badge: string
@@ -44,7 +43,7 @@ export function PageHero({
         className='absolute inset-0'
         initial={{ scale: 1.06 }}
         animate={{ scale: 1 }}
-        transition={{ duration: dur(1.15), ease }}
+        transition={{ duration: dur(HERO_DURATION.image), ease: HERO_EASE }}
       >
         <Image
           src={imageSrc}
@@ -72,7 +71,11 @@ export function PageHero({
               className='w-fit rounded-full border border-white/30 bg-white/10 px-[1rem] py-[0.375rem] font-inter text-[0.875rem] leading-[1.25rem] font-medium tracking-[0.04375rem] text-white/90 uppercase backdrop-blur-sm'
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: dur(0.7), ease, delay: dur(0.15) }}
+              transition={{
+                duration: dur(HERO_DURATION.badge),
+                ease: HERO_EASE,
+                delay: dur(HERO_DELAY.badge),
+              }}
             >
               {badge}
             </motion.span>
@@ -81,7 +84,11 @@ export function PageHero({
               className='font-playfair text-[3.75rem] leading-[3.75rem] font-bold tracking-[-0.09375rem] text-white xlg:text-[2.75rem] xlg:leading-[3rem] xsm:text-[2rem] xsm:leading-[2.5rem] xsm:tracking-normal'
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: dur(0.75), ease, delay: dur(0.22) }}
+              transition={{
+                duration: dur(HERO_DURATION.title),
+                ease: HERO_EASE,
+                delay: dur(HERO_DELAY.title),
+              }}
             >
               {title}
             </motion.h1>
@@ -90,7 +97,11 @@ export function PageHero({
               className='font-inter text-[1.125rem] leading-[1.828125rem] text-white/90 xsm:text-[0.9375rem] xsm:leading-[1.625rem]'
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: dur(0.7), ease, delay: dur(0.36) }}
+              transition={{
+                duration: dur(HERO_DURATION.subtitle),
+                ease: HERO_EASE,
+                delay: dur(HERO_DELAY.subtitle),
+              }}
             >
               {subtitle}
             </motion.p>
@@ -101,7 +112,11 @@ export function PageHero({
                 className='h-px w-[6rem] bg-[linear-gradient(90deg,rgba(255,216,135,0)_0%,#FFD887_50%,rgba(255,216,135,0)_100%)]'
                 initial={{ opacity: 0, y: 22 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: dur(0.7), ease, delay: dur(0.44) }}
+                transition={{
+                  duration: dur(HERO_DURATION.divider),
+                  ease: HERO_EASE,
+                  delay: dur(HERO_DELAY.divider),
+                }}
               />
             ) : null}
           </div>

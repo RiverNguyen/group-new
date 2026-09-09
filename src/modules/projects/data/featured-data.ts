@@ -4,7 +4,6 @@ export type FeaturedProject = {
   title: string
   image: string
   imageAlt: string
-  href: string
 }
 
 export const FEATURED_PROJECTS: FeaturedProject[] = [
@@ -15,7 +14,6 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     image:
       'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Đại lộ trung tâm thành phố với dòng xe lưu thông',
-    href: '#',
   },
   {
     id: 'cang-can-bateco-vinh-phuc',
@@ -24,7 +22,6 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     image:
       'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Bãi container và hệ thống cần cẩu nhìn từ trên cao',
-    href: '#',
   },
   {
     id: 'sun-elite-city',
@@ -33,7 +30,6 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     image:
       'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Cụm cao ốc ven sông nhìn từ xa',
-    href: '#',
   },
   {
     id: 'dien-mat-troi-ninh-thuan',
@@ -42,6 +38,5 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     image:
       'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Cánh đồng tấm pin năng lượng mặt trời',
-    href: '#',
   },
 ]

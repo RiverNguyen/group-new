@@ -1,8 +1,9 @@
 'use client'
 
 import { Check, ChevronDown } from 'lucide-react'
+import { useParams } from 'next/navigation'
 import { useLocale } from 'next-intl'
-import { useState } from 'react'
+import { type ComponentProps, useState } from 'react'
 
 import DrawerProvider from '@/components/providers/drawer-provider'
 import {
@@ -15,6 +16,8 @@ import { Link, usePathname } from '@/i18n/navigation'
 import { HEADER_LANGUAGES, type LanguageOption } from '@/layouts/header/components/header-data'
 import { ChinaFlag, UsFlag, VietnamFlag } from '@/layouts/header/components/icons'
 import { cn } from '@/lib/utils'
+
+type LocaleSwitchHref = ComponentProps<typeof Link>['href']
 
 function LanguageFlag({ locale }: { locale: LanguageOption['locale'] }) {
   if (locale === 'en') return <UsFlag className='size-5' />
@@ -47,13 +50,15 @@ function LanguageTrigger({
 function LanguageOptions({ onSelect }: { onSelect?: () => void }) {
   const locale = useLocale()
   const pathname = usePathname()
+  const params = useParams()
+  const href = { pathname, params } as LocaleSwitchHref
 
   return (
     <ul className='flex flex-col'>
       {HEADER_LANGUAGES.map((language) => (
         <li key={language.code}>
           <Link
-            href={pathname}
+            href={href}
             locale={language.locale}
             onClick={onSelect}
             className={cn(
@@ -78,6 +83,8 @@ function LanguageOptions({ onSelect }: { onSelect?: () => void }) {
 function DesktopLanguageSwitcher() {
   const locale = useLocale()
   const pathname = usePathname()
+  const params = useParams()
+  const href = { pathname, params } as LocaleSwitchHref
   const currentLanguage =
     HEADER_LANGUAGES.find((item) => item.locale === locale) ?? HEADER_LANGUAGES[0]
 
@@ -108,7 +115,7 @@ function DesktopLanguageSwitcher() {
             )}
           >
             <Link
-              href={pathname}
+              href={href}
               locale={language.locale}
               className='flex w-full items-center justify-between py-[0.3125rem] pr-2 pl-4'
             >

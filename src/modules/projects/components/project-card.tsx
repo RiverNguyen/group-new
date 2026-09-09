@@ -1,6 +1,8 @@
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 
+import ROUTES from '@/configs/routes'
+import { Link } from '@/i18n/navigation'
 import type { Project } from '@/modules/projects/data/projects-data'
 
 type ProjectCardProps = {
@@ -48,14 +50,14 @@ export function ProjectCard({ project, imageSizes }: ProjectCardProps) {
           {project.title}
         </h3>
 
-        <a
-          href={project.href}
+        <Link
+          href={{ pathname: ROUTES.projectDetail, params: { slug: project.id } }}
           aria-label={`Xem chi tiết dự án ${project.title}`}
           className='inline-flex w-fit items-center gap-[0.5rem] font-inter text-[0.875rem] leading-[1.25rem] font-medium tracking-[0.04375rem] text-[#FFD887] uppercase outline-offset-4 transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-[#FFD887]'
         >
           Xem chi tiết
           <ArrowUpRight className='size-[0.625rem]' />
-        </a>
+        </Link>
       </div>
     </article>
   )

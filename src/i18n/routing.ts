@@ -37,10 +37,20 @@ export const routing = defineRouting({
       en: '/projects',
       cn: '/项目',
     },
+    '/du-an/[slug]': {
+      vi: '/du-an/[slug]',
+      en: '/projects/[slug]',
+      cn: '/项目/[slug]',
+    },
     '/tin-tuc/hoat-dong-xa-hoi': {
       vi: '/tin-tuc/hoat-dong-xa-hoi',
       en: '/news/social-activities',
       cn: '/新闻/社会活动',
+    },
+    '/tin-tuc/[slug]': {
+      vi: '/tin-tuc/[slug]',
+      en: '/news/[slug]',
+      cn: '/新闻/[slug]',
     },
   },
 })

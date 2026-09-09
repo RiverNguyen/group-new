@@ -8,6 +8,8 @@ import type { Swiper as SwiperType } from 'swiper'
 import { Autoplay, Keyboard } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
+import ROUTES from '@/configs/routes'
+import { Link } from '@/i18n/navigation'
 import { CarouselProgress, setBarProgress } from '@/modules/projects/components/carousel-progress'
 import type { FeaturedProject } from '@/modules/projects/data/featured-data'
 
@@ -105,12 +107,12 @@ export function FeaturedCarousel({ items }: { items: FeaturedProject[] }) {
                   {item.chip}
                 </span>
                 <h3 className='font-playfair text-[4.5rem] leading-[5.25rem] font-bold tracking-[-0.09rem] text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] xlg:text-[3rem] xlg:leading-[3.5rem] xsm:text-[2rem] xsm:leading-[2.5rem] xsm:tracking-normal'>
-                  <a
-                    href={item.href}
+                  <Link
+                    href={{ pathname: ROUTES.projectDetail, params: { slug: item.id } }}
                     className='outline-offset-4 transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-[#FFD887]'
                   >
                     {item.title}
-                  </a>
+                  </Link>
                 </h3>
               </div>
             </SwiperSlide>

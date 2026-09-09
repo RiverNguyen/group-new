@@ -1,6 +1,8 @@
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 
+import ROUTES from '@/configs/routes'
+import { Link } from '@/i18n/navigation'
 import { formatArticleDate, type Article } from '@/modules/social-activities/data/articles-data'
 
 type ArticleCardProps = {
@@ -37,8 +39,8 @@ export function ArticleCard({ article }: ArticleCardProps) {
           {article.excerpt}
         </p>
 
-        <a
-          href={article.href}
+        <Link
+          href={{ pathname: ROUTES.articleDetail, params: { slug: article.id } }}
           className='mt-auto inline-flex w-fit items-center gap-[0.25rem] pt-[1.5rem] font-playfair text-[0.875rem] leading-5 font-bold text-[#062B68] transition-colors hover:text-[#0A47A9]'
         >
           Xem chi tiết
@@ -47,7 +49,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
             aria-hidden
             className='size-4'
           />
-        </a>
+        </Link>
       </div>
     </article>
   )

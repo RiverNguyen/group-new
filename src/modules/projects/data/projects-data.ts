@@ -16,7 +16,6 @@ export type Project = {
   sectorLabel: string
   image: string
   imageAlt: string
-  href: string
 }
 
 export const PROJECTS_PER_PAGE = 6
@@ -31,7 +30,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Kho hàng công nghiệp với hệ thống giá kệ cao tầng',
-    href: '#',
   },
   {
     id: 'to-hop-bao-tri-thiet-bi-hai-phong',
@@ -42,7 +40,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Nhà xưởng khung thép trước khi lắp đặt thiết bị',
-    href: '#',
   },
   {
     id: 'nha-may-ket-cau-thep-dung-quat',
@@ -53,7 +50,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Dây chuyền và đường ống bên trong nhà máy',
-    href: '#',
   },
   {
     id: 'khu-cong-nghiep-yen-phong-mo-rong',
@@ -64,7 +60,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Tổ hợp nhà máy công nghiệp nhìn từ xa',
-    href: '#',
   },
   {
     id: 'nha-xuong-xay-san-bateco-long-an',
@@ -75,7 +70,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Lối đi giữa các giá kệ trong nhà xưởng',
-    href: '#',
   },
   {
     id: 'trung-tam-logistics-cai-mep',
@@ -86,7 +80,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Tàu container cập cảng bên hệ thống cần cẩu',
-    href: '#',
   },
   {
     id: 'sun-elite-city',
@@ -97,7 +90,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Cụm toà tháp căn hộ nhìn từ dưới lên',
-    href: '#',
   },
   {
     id: 'bateco-riverside-da-nang',
@@ -108,7 +100,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Toà căn hộ mặt kính uốn cong',
-    href: '#',
   },
   {
     id: 'khu-do-thi-bateco-green-ha-long',
@@ -119,7 +110,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Công trình kiến trúc hiện đại trong khu đô thị',
-    href: '#',
   },
   {
     id: 'trung-tam-huan-luyen-ky-thuat-hoa-lac',
@@ -130,7 +120,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Hội trường huấn luyện với hàng ghế xếp dãy',
-    href: '#',
   },
   {
     id: 'to-hop-kho-van-an-ninh-phia-nam',
@@ -141,7 +130,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Kho vận quy mô lớn với hệ thống kệ chứa hàng',
-    href: '#',
   },
   {
     id: 'nha-may-khi-tai-quang-dien-tu',
@@ -152,7 +140,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Kỹ thuật viên vận hành dây chuyền lắp ráp thiết bị',
-    href: '#',
   },
   {
     id: 'vien-nghien-cuu-vat-lieu-bateco',
@@ -163,7 +150,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1580982327559-c1202864eb05?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Nhóm nghiên cứu làm việc trong phòng thí nghiệm',
-    href: '#',
   },
   {
     id: 'trung-tam-rnd-tu-dong-hoa-binh-duong',
@@ -174,7 +160,6 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Cánh tay robot trên dây chuyền tự động hoá',
-    href: '#',
   },
   {
     id: 'phong-thi-nghiem-nang-luong-tai-tao-ninh-thuan',
@@ -185,6 +170,5 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=960&q=80',
     imageAlt: 'Hàng tấm pin mặt trời tại khu thử nghiệm',
-    href: '#',
   },
 ]

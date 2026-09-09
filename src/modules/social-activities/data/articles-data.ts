@@ -14,7 +14,6 @@ export type Article = {
   publishedAt: string
   image: string
   imageAlt: string
-  href: string
 }
 
 export const ARTICLES_PER_PAGE = 9
@@ -23,12 +22,11 @@ export function formatArticleDate(publishedAt: string): string {
   return format(parseISO(publishedAt), 'dd/MM/yyyy')
 }
 
-type ArticleSeed = Omit<Article, 'categoryLabel' | 'href'>
+type ArticleSeed = Omit<Article, 'categoryLabel'>
 
 const toArticle = (seed: ArticleSeed): Article => ({
   ...seed,
   categoryLabel: CATEGORY_LABELS[seed.category],
-  href: '#',
 })
 
 const unsplash = (id: string, width: number) =>
