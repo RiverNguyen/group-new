@@ -115,6 +115,196 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+.ecosystem-orbit-track {
+  animation: ecosystem-orbit 38s linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.group\/ecosystem:hover .ecosystem-orbit-track,
+.group\/ecosystem:hover .ecosystem-orbit-card-shell,
+.group\/ecosystem:hover .ecosystem-orbit-card,
+.group\/ecosystem:hover .ecosystem-ring-spin,
+.group\/ecosystem:hover .ecosystem-center-pulse,
+.group\/ecosystem:hover .ecosystem-core {
+  animation-play-state: paused;
+}
+
+.ecosystem-orbit-item {
+  transform: translate(-50%, -50%) rotate(var(--ecosystem-angle))
+    translateX(var(--ecosystem-radius)) rotate(var(--ecosystem-counter-angle));
+  transform-origin: center;
+}
+
+.ecosystem-orbit-card-shell {
+  animation: ecosystem-counter-orbit 38s linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.ecosystem-orbit-card {
+  position: relative;
+  overflow: hidden;
+  animation: ecosystem-card-float 5.6s cubic-bezier(0.45, 0, 0.25, 1) infinite;
+  animation-delay: var(--ecosystem-delay);
+  transition:
+    box-shadow 450ms ease,
+    transform 450ms ease;
+  will-change: transform;
+}
+
+.ecosystem-orbit-card::before {
+  content: '';
+  position: absolute;
+  inset: -40% -80%;
+  background: linear-gradient(
+    110deg,
+    transparent 36%,
+    rgba(255, 255, 255, 0.75) 48%,
+    rgba(244, 183, 0, 0.16) 53%,
+    transparent 66%
+  );
+  opacity: 0;
+  transform: translateX(-42%);
+  animation: ecosystem-card-shine 7.6s ease-in-out infinite;
+  animation-delay: var(--ecosystem-delay);
+}
+
+.group\/ecosystem:hover .ecosystem-orbit-card {
+  transform: translateY(-0.18rem) scale(1.025);
+  box-shadow: 0 1.1rem 2.4rem rgba(6, 43, 104, 0.14);
+}
+
+.ecosystem-ring-spin {
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    conic-gradient(
+        from 45deg,
+        #e8edf4 0deg,
+        #e8edf4 255deg,
+        rgba(244, 183, 0, 0.72) 292deg,
+        #e8edf4 330deg,
+        #e8edf4 360deg
+      )
+      border-box;
+  border: 1px solid transparent;
+  animation:
+    ecosystem-orbit 48s linear infinite,
+    ecosystem-ring-breathe 5.8s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.ecosystem-ring-spin-reverse {
+  animation-direction: reverse;
+  animation-duration: 58s, 6.8s;
+}
+
+.ecosystem-center-pulse {
+  content: '';
+  background: radial-gradient(circle, rgba(244, 183, 0, 0.08) 0%, transparent 62%);
+  animation: ecosystem-center-pulse 3.8s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+/* .ecosystem-core {
+  animation: ecosystem-core-float 5.2s ease-in-out infinite;
+} */
+
+@keyframes ecosystem-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ecosystem-counter-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes ecosystem-card-float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  45% {
+    transform: translateY(-0.34rem) scale(1.012);
+  }
+}
+
+@keyframes ecosystem-card-shine {
+  0%,
+  58% {
+    opacity: 0;
+    transform: translateX(-45%);
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  88%,
+  100% {
+    opacity: 0;
+    transform: translateX(45%);
+  }
+}
+
+@keyframes ecosystem-ring-breathe {
+  0%,
+  100% {
+    opacity: 0.78;
+    filter: drop-shadow(0 0 0 rgba(244, 183, 0, 0));
+  }
+
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 0.45rem rgba(244, 183, 0, 0.13));
+  }
+}
+
+@keyframes ecosystem-center-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.86);
+  }
+
+  52% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes ecosystem-core-float {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecosystem-orbit-track,
+  .ecosystem-orbit-card-shell,
+  .ecosystem-orbit-card,
+  .ecosystem-ring-spin,
+  .ecosystem-center-pulse,
+  .ecosystem-core {
+    animation: none;
+  }
+}
+
 :root {
   --radius: 0.625rem;
   --card: oklch(1 0 0);
