@@ -70,7 +70,7 @@ export function FeaturedArticle({ article }: FeaturedArticleProps) {
 
           <Link
             href={{ pathname: ROUTES.articleDetail, params: { slug: article.id } }}
-            className='mt-[2.5rem] inline-flex w-fit items-center gap-[0.5rem] rounded-[0.75rem] border border-[#E1AA36] px-[1.5rem] py-[0.75rem] font-inter text-[0.75rem] leading-4 font-semibold tracking-[0.0375rem] text-[#946E0E] uppercase transition-colors hover:bg-[#FFD887] hover:text-[#062B68]'
+            className='mt-[2.5rem] inline-flex w-fit items-center gap-[0.5rem] rounded-[0.75rem] border border-[#E1AA36] px-[1.5rem] py-[0.75rem] font-inter text-[0.75rem] leading-4 font-semibold tracking-[0.0375rem] text-[#946E0E] uppercase transition-colors hover:bg-[#FFD887] hover:text-[#062B68] after:absolute after:inset-0 after:content-[""]'
           >
             Xem chi tiết
             <span className='sr-only'>: {article.title}</span>

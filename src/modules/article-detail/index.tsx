@@ -41,7 +41,7 @@ const ArticleDetailModule = async ({ slug }: ArticleDetailModuleProps) => {
   const relatedArticles = ARTICLE_POOL.filter((article) => article.id !== slug)
 
   return (
-    <main className='bg-white'>
+    <main className='bg-white pt-[4.6rem]'>
       <BreadcrumbBar title={entry.article.title} />
 
       <div

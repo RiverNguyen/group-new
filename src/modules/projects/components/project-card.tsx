@@ -53,7 +53,7 @@ export function ProjectCard({ project, imageSizes }: ProjectCardProps) {
         <Link
           href={{ pathname: ROUTES.projectDetail, params: { slug: project.id } }}
           aria-label={`Xem chi tiết dự án ${project.title}`}
-          className='inline-flex w-fit items-center gap-[0.5rem] font-inter text-[0.875rem] leading-[1.25rem] font-medium tracking-[0.04375rem] text-[#FFD887] uppercase outline-offset-4 transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-[#FFD887]'
+          className='inline-flex w-fit items-center gap-[0.5rem] font-inter text-[0.875rem] leading-[1.25rem] font-medium tracking-[0.04375rem] text-[#FFD887] uppercase outline-offset-4 transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-[#FFD887] after:absolute after:inset-0 after:content-[""]'
         >
           Xem chi tiết
           <ArrowUpRight className='size-[0.625rem]' />
