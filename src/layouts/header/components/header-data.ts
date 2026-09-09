@@ -27,7 +27,7 @@ export const HEADER_NAV: NavItem[] = [
     label: 'Lĩnh vực kinh doanh',
     href: '/linh-vuc-kinh-doanh',
     children: [
-      { label: 'Dịch vụ công nghiệp', href: '#' },
+      { label: 'Dịch vụ công nghiệp', href: '/linh-vuc-kinh-doanh/dich-vu-cong-nghiep' },
       { label: 'BĐS công nghiệp', href: '#' },
       { label: 'Bateco Land', href: '#' },
       { label: 'An ninh quốc phòng', href: '#' },
@@ -40,7 +40,7 @@ export const HEADER_NAV: NavItem[] = [
     label: 'Tin tức',
     href: '/tin-tuc',
     children: [
-      { label: 'Hoạt động xã hội', href: '/tin-tuc/cong-ty' },
+      { label: 'Hoạt động xã hội', href: '/tin-tuc/hoat-dong-xa-hoi' },
       { label: 'Văn hóa Bateco', href: '/tin-tuc/nganh' },
     ],
   },

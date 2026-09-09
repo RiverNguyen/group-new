@@ -4,8 +4,9 @@ import Image from 'next/image'
 import { useRef, useState } from 'react'
 
 import { Container } from '@/components/site/container'
-import { useScrollHeader } from '@/hooks/use-scroll-header'
-import { Link } from '@/i18n/navigation'
+import ROUTES from '@/configs/routes'
+import { HEADER_BG, useScrollHeader } from '@/hooks/use-scroll-header'
+import { Link, usePathname } from '@/i18n/navigation'
 import { BurgerButton } from '@/layouts/header/components/burger-button'
 import { HeaderActions } from '@/layouts/header/components/header-actions'
 import { HEADER_BRAND, HEADER_NAV } from '@/layouts/header/components/header-data'
@@ -14,15 +15,20 @@ import { MobileNav } from '@/layouts/header/components/mobile-nav'
 import { NavLink } from '@/layouts/header/components/nav-link'
 import { cn } from '@/lib/utils'
 
+const SOLID_HEADER_PATHNAMES: string[] = [ROUTES.articleDetail]
+
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const headerRef = useRef<HTMLElement | null>(null)
-  const { isScrolled } = useScrollHeader(headerRef)
+  const pathname = usePathname()
+  const solidAtTop = SOLID_HEADER_PATHNAMES.includes(pathname)
+  const { isScrolled } = useScrollHeader(headerRef, { solidAtTop })
 
   return (
     <>
       <header
         ref={headerRef}
+        style={solidAtTop ? { background: HEADER_BG } : undefined}
         className={cn(
           'fixed top-0 z-50 w-full bg-transparent transition-[background,transform] duration-500',
           isScrolled && 'shadow-[0_8px_24px_rgba(0,0,0,0.18)]',
@@ -38,6 +44,7 @@ export function SiteHeader() {
               alt={HEADER_BRAND.name}
               width={240}
               height={76}
+              loading='eager'
               className='h-[3.5rem] w-auto object-cover xsm:h-[2.5rem]'
             />
           </Link>

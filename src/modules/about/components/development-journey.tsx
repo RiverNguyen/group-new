@@ -95,7 +95,7 @@ export function DevelopmentJourney() {
 function MobileTimelineText({ item }: { item: DevelopmentJourneyTextItem }) {
   return (
     <div className='border-l border-[#F4B700]/75 pl-4'>
-      <p className='font-libertinus-serif text-[1.55rem] leading-none font-bold tracking-[0.02em] text-[#F4B700]'>
+      <p className='font-libertinus-serif text-[1.55rem] leading-none font-bold text-[#F4B700]'>
         {item.year}
       </p>
       <p className='mt-2 font-work-sans text-[0.62rem] leading-tight font-bold tracking-[0.04em] text-[#102F62] uppercase'>

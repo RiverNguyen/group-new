@@ -1,7 +1,9 @@
 import { Globe, Youtube } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 import { Container } from '@/components/site/container'
+import ROUTES from '@/configs/routes'
 import { Link } from '@/i18n/navigation'
 import { ContactBar } from '@/layouts/footer/components/contact-bar'
 import {
@@ -16,6 +18,9 @@ import {
 import { NewsletterForm } from '@/layouts/footer/components/newsletter-form'
 
 function FooterLinkColumns({ group }: { group: FooterLinkGroup }) {
+  const tTerms = useTranslations('TermsOfUse')
+  const tPrivacy = useTranslations('PrivacyPolicy')
+
   return (
     <div>
       <h3 className='font-inter text-[1.5rem] font-semibold text-[#E2B570]'>{group.title}</h3>
@@ -31,16 +36,25 @@ function FooterLinkColumns({ group }: { group: FooterLinkGroup }) {
             key={columnIndex}
             className='flex flex-col gap-2.5'
           >
-            {column.map((item) => (
-              <li key={item.label}>
-                <Link
-                  href={item.href as '/'}
-                  className='font-inter text-[0.875rem] text-white/75 transition-colors hover:text-[#E2B570]'
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {column.map((item) => {
+              const label =
+                item.href === ROUTES.termsOfUse
+                  ? tTerms('navLabel')
+                  : item.href === ROUTES.privacyPolicy
+                    ? tPrivacy('navLabel')
+                    : item.label
+
+              return (
+                <li key={item.href === '#' ? item.label : item.href}>
+                  <Link
+                    href={item.href as '/'}
+                    className='font-inter text-[0.875rem] text-white/75 transition-colors hover:text-[#E2B570]'
+                  >
+                    {label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         ))}
       </div>

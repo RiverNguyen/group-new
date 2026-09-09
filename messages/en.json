@@ -80,5 +80,162 @@
     "title": "Something went wrong",
     "description": "An unexpected error occurred. Please try again.",
     "retry": "Try again"
+  },
+  "TermsOfUse": {
+    "navLabel": "Terms of use",
+    "hero": {
+      "title": "TERMS OF USE",
+      "description": "Bateco Group is committed to transparency and legal compliance across construction, investment, and operations.",
+      "imageAlt": "Construction site with steel structure"
+    },
+    "general": {
+      "title": "General terms",
+      "paragraphs": [
+        "Welcome to the electronic information system of Bateco Group. By accessing and using this website, you automatically accept and agree to be bound by the terms and conditions stated here.",
+        "Bateco Group may change, edit, add, or remove any part of these Terms of Use at any time. Changes take effect as soon as they are posted on the website, without prior notice."
+      ],
+      "bullets": [
+        {
+          "label": "Scope",
+          "text": "The entire digital ecosystem of Bateco."
+        },
+        {
+          "label": "Audience",
+          "text": "All individuals and organizations that access or use the services."
+        },
+        {
+          "label": "Purpose",
+          "text": "To ensure a transparent environment for investment and cooperation."
+        }
+      ]
+    },
+    "rights": {
+      "title": "User rights and responsibilities",
+      "cards": [
+        {
+          "title": "Rights",
+          "text": "Users may access and look up project information, investment reports, and submit official advisory requests through the designated communication channels."
+        },
+        {
+          "title": "Responsibilities",
+          "text": "Users may not use any device or software to interfere, or attempt to interfere, with the normal operation of the website."
+        }
+      ]
+    },
+    "intellectual": {
+      "title": "Intellectual property",
+      "text": "All content, including but not limited to text, graphic design, icons, images, video, and source code, is the exclusive property of Bateco Group or the relevant licensors."
+    },
+    "featured": {
+      "imageAlt": "Bateco Group representatives at an event and awards ceremony",
+      "caption": "Building the future on a solid legal foundation."
+    },
+    "liability": {
+      "title": "Limitation of liability",
+      "highlight": "“Bateco Group is not liable for any loss or damage, direct or indirect, arising from the use or inability to use this website.”",
+      "text": "Information about investment projects is for reference at the time of publication. Official financial commitments are established only through a written contract signed by the legal representative."
+    },
+    "law": {
+      "title": "Governing law and dispute resolution",
+      "text": "All disputes arising from or relating to the use of this website shall be governed by the laws of the Socialist Republic of Vietnam.",
+      "viacTitle": "VIETNAM INTERNATIONAL ARBITRATION CENTRE (VIAC)"
+    },
+    "changes": {
+      "title": "Changes to the terms",
+      "text": "Your continued use of the website after changes are made means you accept those changes. We encourage users to check this page regularly for the latest updates."
+    }
+  },
+  "PrivacyPolicy": {
+    "navLabel": "Privacy policy",
+    "hero": {
+      "eyebrow": "Privacy & security",
+      "titleLead": "Information",
+      "titleAccent": "privacy",
+      "titleEnd": "policy",
+      "description": "Bateco Group is committed to protecting personal data when you access and use services on bateco.com.vn. This policy explains how we collect, use, and safeguard information.",
+      "imageAlt": "Construction professional with blueprints and a hard hat"
+    },
+    "toc": {
+      "title": "Policy contents"
+    },
+    "collection": {
+      "tocLabel": "Data collection",
+      "title": "Article 1. Collection of personal information",
+      "text": "We collect the information needed for advisory work, transactions, and a better user experience, including:",
+      "items": [
+        {
+          "label": "Identity information",
+          "text": "Full name, phone number, email."
+        },
+        {
+          "label": "Transaction information",
+          "text": "Project search history, quotation requests, contracts."
+        },
+        {
+          "label": "Technical data",
+          "text": "IP address, browser type, cookies."
+        }
+      ]
+    },
+    "purpose": {
+      "tocLabel": "Purpose of use",
+      "title": "Article 2. Purpose of use",
+      "text": "Information is used to improve service quality and the customer experience:",
+      "cards": [
+        {
+          "title": "Service delivery",
+          "text": "Advisory support and project information upon customer request."
+        },
+        {
+          "title": "Market information",
+          "text": "Periodic market analysis and news on new projects."
+        }
+      ]
+    },
+    "sharing": {
+      "tocLabel": "Third-party sharing",
+      "title": "Article 3. Sharing with third parties",
+      "text": "Bateco Group does not sell or rent personal information to third parties for commercial purposes, except in the following cases:",
+      "items": [
+        {
+          "title": "Internal sharing",
+          "text": "Sharing with member companies in the Bateco Group system to support projects."
+        },
+        {
+          "title": "Legal requests",
+          "text": "Complying with requests from competent state authorities under Vietnamese law."
+        }
+      ]
+    },
+    "storage": {
+      "tocLabel": "Storage & security",
+      "title": "Article 4. Data storage and security",
+      "highlight": "We apply a multi-layer security system to keep data on bateco.com.vn fully protected:",
+      "pills": ["Secure cloud storage", "AES-256 data encryption", "IDS/IPS intrusion prevention"]
+    },
+    "rights": {
+      "tocLabel": "Customer rights",
+      "title": "Article 5. Customer rights",
+      "items": [
+        {
+          "title": "Right to access and update",
+          "text": "Customers may request access to, correction of, or deletion of the personal data they have provided."
+        },
+        {
+          "title": "Right to opt out of marketing",
+          "text": "Customers may opt out of advertising and marketing communications from Bateco Group at any time."
+        }
+      ]
+    },
+    "validity": {
+      "tocLabel": "Effectiveness",
+      "title": "Article 6. Effectiveness",
+      "text": "This privacy policy takes effect from the date it is published on the website. Bateco Group may adjust the policy when necessary and will announce changes on this page."
+    },
+    "contact": {
+      "title": "Have questions? Contact us",
+      "text": "If you have any questions about privacy, please contact our support team.",
+      "button": "Send support email"
+    }
   }
 }

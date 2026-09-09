@@ -15,7 +15,7 @@ const inter = Inter({
 const manrope = Manrope({
   variable: '--font-manrope-family',
   subsets: ['latin', 'vietnamese'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
 })
 
 const workSans = Work_Sans({
@@ -34,6 +34,8 @@ const libertinusSerif = Libertinus_Serif({
   variable: '--font-libertinus-serif-family',
   subsets: ['latin', 'vietnamese'],
   weight: ['400', '600', '700'],
+  adjustFontFallback: false,
+  fallback: ['Times New Roman', 'serif'],
 })
 
 export const metadata: Metadata = {
@@ -49,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
+        suppressHydrationWarning
         className={`${inter.variable} ${manrope.variable} ${workSans.variable} ${playfairDisplay.variable} ${libertinusSerif.variable} font-sans antialiased`}
       >
         <QueryProvider>

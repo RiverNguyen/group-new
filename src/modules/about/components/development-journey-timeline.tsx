@@ -101,19 +101,19 @@ function DevelopmentJourneyCenter({
             exit='exit'
           >
             <motion.p
-              className='font-work-sans text-[0.56rem] leading-none font-bold tracking-[0.32em] text-[#B77C1E] uppercase'
+              className='font-work-sans text-[0.56rem] leading-none font-semibold tracking-[0.32em] text-[#B77C1E] uppercase'
               variants={contentVariants}
             >
               Dấu mốc phát triển
             </motion.p>
             <motion.p
-              className='mt-3 font-libertinus-serif text-[4rem] leading-none font-bold text-[#C77D00]'
+              className='mt-2 font-libertinus-serif text-[4rem] leading-none font-bold text-[#C77D00]'
               variants={contentVariants}
             >
               {activeItem.year}
             </motion.p>
             <motion.h3
-              className='mt-4 flex min-h-[3.75rem] w-full flex-col items-center justify-center gap-1 font-work-sans text-[1.08rem] leading-[1.18] font-semibold tracking-[0.08em] text-[#30343B] uppercase'
+              className='mt-2 flex min-h-[3.75rem] w-full flex-col items-center justify-center gap-1 font-work-sans text-[0.875rem] leading-[1.18] font-semibold tracking-[0.08em] text-[#30343B] uppercase'
               variants={contentVariants}
             >
               {activeItem.cardTitle.map((line) => (
@@ -126,13 +126,13 @@ function DevelopmentJourneyCenter({
               ))}
             </motion.h3>
             <motion.p
-              className='mt-5 max-w-[12.4rem] font-work-sans text-[0.68rem] leading-[1.72] text-[#74777E]'
+              className='mt-2 max-w-[12.4rem] font-work-sans text-[0.68rem] leading-[1.72] text-[#74777E]'
               variants={contentVariants}
             >
               {activeItem.description}
             </motion.p>
             <motion.p
-              className='mt-auto font-work-sans text-[0.58rem] font-bold tracking-[0.22em] text-[#B77C1E]'
+              className='mt-2 font-work-sans text-[0.58rem] font-bold tracking-[0.22em] text-[#B77C1E]'
               variants={contentVariants}
             >
               {activeItem.order}
